@@ -1,5 +1,7 @@
 # GRP9 ESG RAG Pipeline
 
+> **Note**: This project is designed to run on the **AAU AI LAB (HPC)** cluster with SLURM job scheduling and Singularity containers.
+
 A Retrieval-Augmented Generation (RAG) system for analyzing Environmental, Social, and Governance (ESG) reports from major companies. This pipeline extracts and answers questions about carbon emissions, sustainability targets, and climate initiatives using Large Language Models (LLMs) and vector databases.
 
 ## Overview
@@ -51,9 +53,12 @@ The dataset includes ESG reports from 24 major companies across various sectors:
 ## Prerequisites
 
 ### Environment
+This project is designed for the **AAU AI LAB (HPC)** cluster environment and requires:
+- Access to AAU AI LAB HPC cluster with SLURM job scheduler
+- Singularity container runtime (available on AAU AI LAB)
 - Python 3.8+
-- CUDA-capable GPU (recommended for faster processing)
-- Singularity container (for SLURM cluster deployment)
+- CUDA-capable GPU (provided by AAU AI LAB cluster nodes)
+- Singularity image: `/ceph/container/vllm-openai_latest.sif` (available on AAU AI LAB)
 
 ### Key Dependencies
 - `langchain-community` - Vector store and document handling
